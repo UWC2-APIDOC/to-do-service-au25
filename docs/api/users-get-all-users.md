@@ -1,7 +1,27 @@
 ---
+# markdownlint-disable
+# vale  off
 layout: default
 parent: user resource
 nav_order: 1
+# tags used by AI files
+description: GET all `user` resources from the service
+tags:
+    - api
+categories:
+    - api-reference
+ai_relevance: high
+importance: 7
+prerequisites:
+    - /api/user
+related_pages: []
+examples: []
+api_endpoints: 
+    - GET /users
+version: "v1.0"
+last_updated: "2025-09-03"
+# vale  on
+# markdownlint-enable
 ---
 
 # Get all users

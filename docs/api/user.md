@@ -1,8 +1,28 @@
 ---
+# markdownlint-disable
+# vale  off
 layout: default
 nav_order: 5
 has_children: true
 has_toc: false
+# tags used by AI files
+description: "Information about the `user` resource"
+tags: 
+    - api
+categories:
+    - api-reference
+ai_relevance: high
+importance: 8
+prerequisites: []
+related_pages: 
+    - /tutorials/enroll-a-new-user
+examples: []
+api_endpoints: 
+    - /users
+version: "v1.0"
+last_updated: "2025-09-03"
+# vale  on
+# markdownlint-enable
 ---
 
 # `user` resource

@@ -1,7 +1,28 @@
 ---
+# markdownlint-disable
+# vale  off
 layout: default
 parent: Tutorials
 nav_order: 2
+# tags used by AI files
+description: Add a `user` resource to the service
+tags:
+    - api
+categories: 
+    - tutorial
+ai_relevance: high
+importance: 6
+prerequisites: 
+    - /before-you-start-a-tutorial
+    - /api/user
+related_pages: []
+examples: []
+api_endpoints: 
+    - POST /users
+version: "v1.0"
+last_updated: "2025-09-03"
+# vale  on
+# markdownlint-enable
 ---
 
 # Tutorial: Enroll a new user

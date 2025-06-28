@@ -1,10 +1,30 @@
 ---
+# markdownlint-disable
+# vale  off
 layout: default
 parent: user resource
 nav_order: 2
+# tags used by AI files
+description: GET the `user` resource with the specified ID from the service
+tags:
+    - api
+categories:
+    - api-reference
+ai_relevance: high
+importance: 7
+prerequisites: 
+    - /api/user
+related_pages: []
+examples: []
+api_endpoints: 
+    - GET /users
+version: "v1.0"
+last_updated: "2025-09-03"
+# vale  on
+# markdownlint-enable
 ---
 
-# Get user by ID
+# Get a user by ID
 
 Returns an array of  [`user`](user.md) objects that contains only the user specified by the `id` parameter, if it exists.
 

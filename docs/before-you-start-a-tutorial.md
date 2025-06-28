@@ -1,6 +1,26 @@
 ---
+# markdownlint-disable
+# vale  off
 layout: default
 nav_order: 2
+# tags used by AI files
+description: Describes how to configure your local computer to run a local instance of the to-do-service.
+tags: 
+    - introduction
+categories: 
+    - tutorial
+ai_relevance: high
+importance: 9
+prerequisites: []
+related_pages: 
+    - /tutorials/add-a-new-task
+    - /tutorials/enroll-a-new-user]
+examples: []
+api_endpoints: []
+version: "v1.0"
+last_updated: "2025-09-03"
+# vale  on
+# markdownlint-enable
 ---
 
 # Before you start a tutorial
@@ -28,9 +48,15 @@ long-term support, also known as _LTS_, version of the Windows, MacOS, or Linux 
     - Version 0.17.4 of [json-server](https://www.npmjs.com/package/json-server/v/0.17.4)
     - A current copy of the database file. You can get this by syncing your fork.
   
-        **Tip**: if you're using a fork of the repository, create a working branch in which to do your tutorials. Create a new branch for each tutorial to prevent a mistake in one from affecting your work in another.
-    - The [Postman desktop app](https://www.postman.com/downloads/). Because you run the **To-Do Service** on your development system with an `http://localhost` host name, the web-version of Postman can't perform the exercises.
-    - The [Postman desktop app](https://www.postman.com/downloads/). Because you run the **To-Do Service** on your development system with an `http://localhost` host name, the web-version of Postman can't perform the exercises.
+        **Tip**: if you're using a fork of the repository, create a working branch in which to
+        do your tutorials. Create a new branch for each tutorial to prevent a mistake in one from
+        affecting your work in another.
+    - The [Postman desktop app](https://www.postman.com/downloads/).
+        Because you run the **To-Do Service** on your development system with an `http://localhost`
+        host name, the web-version of Postman can't perform the exercises.
+    - The [Postman desktop app](https://www.postman.com/downloads/).
+        Because you run the **To-Do Service** on your development system with an `http://localhost`
+        host name, the web-version of Postman can't perform the exercises.
 
 <!-- vale Google.Acronyms = YES -->
 
@@ -38,7 +64,9 @@ long-term support, also known as _LTS_, version of the Windows, MacOS, or Linux 
 
 To test your development system:.
 
-1. Create and checkout a test branch of your fork of the To-Do-service repository. Your `GitHub repository workspace` is the directory that contains your fork of the `to-do-service-au25` repository.
+1. Create and checkout a test branch of your fork of the To-Do-service repository.
+    Your `GitHub repository workspace` is the directory that contains your fork of
+    the `to-do-service-au25` repository.
 
     ```shell
     cd <your GitHub repository workspace>
@@ -59,7 +87,8 @@ To test your development system:.
     curl http://localhost:3000/users
     ```
 
-3. If the service is running correctly, you should see a list of users from the service, such as in this example.
+3. If the service is running correctly, you should see a list of users from the service,
+    such as in this example.
 
     ```js
     [

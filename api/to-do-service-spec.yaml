@@ -77,10 +77,10 @@ paths:
         '500':
           $ref: '#/components/responses/ServerError'
 
-  /users/{userId}:
+  /users/{id}:
     get:
       summary: Get a user by ID
-      description: Returns a single user based on their unique `userId`.
+      description: Returns a single user based on their unique `id`.
       tags:
         - Users
       operationId: getOneUser
@@ -170,7 +170,6 @@ paths:
         - $ref: '#/components/parameters/PaginationPageParam'
         - $ref: '#/components/parameters/PaginationPerPageParam'
         - $ref: '#/components/parameters/SortParam'
-        - $ref: '#/components/parameters/TaskStatusFilterParam'
       responses:
         '200':
           $ref: '#/components/responses/SuccessGetAllTasks'
@@ -215,10 +214,10 @@ paths:
         '500':
           $ref: '#/components/responses/ServerError'
 
-  /tasks/{taskId}:
+  /tasks/{id}:
     get:
       summary: Get a task by ID
-      description: Returns a single task based on its unique `taskId`.
+      description: Returns a single task based on its unique `id`.
       tags:
         - Tasks
       operationId: getOneTask
@@ -333,40 +332,20 @@ components:
         descendingByDate:
           value: "-dueDate"
           summary: Sort by due date descending
-        byStatus:
-          value: "taskStatus"
-          summary: Sort by task status ascending
-
-    TaskStatusFilterParam:
-      name: taskStatus
-      in: query
-      description: Filter tasks by their status. Returns only tasks with the specified status.
-      schema:
-        $ref: '#/components/schemas/TaskStatus'
-      examples:
-        notStarted:
-          value: "NOT_STARTED"
-          summary: Filter for tasks not yet started
-        inProgress:
-          value: "IN_PROGRESS"
-          summary: Filter for tasks currently in progress
-        completed:
-          value: "COMPLETED"
-          summary: Filter for completed tasks
 
     UserIdPathParam:
-      name: userId
+      name: id
       in: path
       required: true
-      description: The unique `userId` of the `user` resource to retrieve.
+      description: The unique `id` of the `user` resource to retrieve.
       schema:
         type: integer
 
     TaskIdPathParam:
-      name: taskId
+      name: id
       in: path
       required: true
-      description: The unique `taskId` of the `task` resource to retrieve.
+      description: The unique `id` of the `task` resource to retrieve.
       schema:
         type: integer
 
@@ -379,19 +358,19 @@ components:
     User:
       type: object
       properties:
-        userId:
+        id:
           $ref: '#/components/schemas/UserId'
         lastName:
           $ref: '#/components/schemas/LastName'
         firstName:
           $ref: '#/components/schemas/FirstName'
-        contactEmail:
+        email:
           $ref: '#/components/schemas/ContactEmail'
       required:
-        - userId
+        - id
         - lastName
         - firstName
-        - contactEmail
+        - email
       description: Represents a user in the system with unique ID, name, and contact email. 
         Users must create a `user` resource before adding `task` resources.
         The application using the To-Do service handles the registration process that would use this operation.
@@ -404,15 +383,15 @@ components:
           $ref: '#/components/schemas/LastName'
         firstName:
           $ref: '#/components/schemas/FirstName'
-        contactEmail:
+        email:
           $ref: '#/components/schemas/ContactEmail'
       required:
         - lastName
         - firstName
-        - contactEmail
+        - email
       description: Contains the data needed to create a new user.
         The `POST /users` operation uses this schema for the request body.
-        The API ensures a unique `contactEmail` value and generates a unique `userId` for the new user.
+        The API ensures a unique `email` value and generates a unique `id` for the new user.
 
     UserPatch:
       type: object
@@ -421,38 +400,35 @@ components:
           $ref: '#/components/schemas/LastName'
         firstName:
           $ref: '#/components/schemas/FirstName'
-        contactEmail:
+        email:
           $ref: '#/components/schemas/ContactEmail'
       minProperties: 1
       description: Contains the data you can update for an existing user.
-        The `PATCH /users/{userId}` operation uses this schema for partial updates,
+        The `PATCH /users/{id}` operation uses this schema for partial updates,
         so you can provide only the fields that you want to change.
-        The API ensures `contactEmail` remains unique across all users.
+        The API ensures `email` remains unique across all users.
 
     Task:
       type: object
       properties:
-        taskId:
+        id:
           $ref: '#/components/schemas/TaskId'
         userId:
           $ref: '#/components/schemas/UserId'
-        taskTitle:
+        title:
           $ref: '#/components/schemas/TaskTitle'
-        taskDescription:
+        description:
           $ref: '#/components/schemas/TaskDescription'
-        taskStatus:
-          $ref: '#/components/schemas/TaskStatus'
         dueDate:
           $ref: '#/components/schemas/DueDate'
-        warningOffset:
+        warning:
           $ref: '#/components/schemas/WarningOffset'
       required:
-        - taskId
+        - id
         - userId
-        - taskTitle
-        - taskStatus
+        - title
         - dueDate
-        - warningOffset
+        - warning
       description: Represents a task with unique ID, creator's user ID, 
         title, description, status, due date, and warning offset.
 
@@ -461,48 +437,41 @@ components:
       properties:
         userId:
           $ref: '#/components/schemas/UserId'
-        taskTitle:
+        title:
           $ref: '#/components/schemas/TaskTitle'
-        taskDescription:
+        description:
           $ref: '#/components/schemas/TaskDescription'
-        taskStatus:
-          $ref: '#/components/schemas/TaskStatus'
         dueDate:
           $ref: '#/components/schemas/DueDate'
-        warningOffset:
+        warning:
           $ref: '#/components/schemas/WarningOffset'
       required:
         - userId
-        - taskTitle
+        - title
         - dueDate
-        - warningOffset
+        - warning
       description: Contains the data needed to create a new task.
         The `POST /tasks` operation uses this schema for the request body.
         The API doesn't check for duplicates, so similar tasks may exist.
-        The API generates a unique `taskId`, requires a valid `userId`,
-        ensures `dueDate` is in the future, and requires a positive `warningOffset`.
-        If `taskStatus` is not provided, it defaults to `NOT_STARTED`.
+        The API generates a unique `id`, requires a valid `userId`,
+        ensures `dueDate` is in the future, and requires a positive `warning`.
 
     TaskPatch:
       type: object
       properties:
         userId:
           $ref: '#/components/schemas/UserId'
-        taskTitle:
+        title:
           $ref: '#/components/schemas/TaskTitle'
-        taskDescription:
+        description:
           $ref: '#/components/schemas/TaskDescription'
-        taskStatus:
-          $ref: '#/components/schemas/TaskStatus'
         dueDate:
           $ref: '#/components/schemas/DueDate'
-        warningOffset:
+        warning:
           $ref: '#/components/schemas/WarningOffset'
       minProperties: 1
       description: Contains the data you can update for an existing task.
-        The `PATCH /tasks/{taskId}` operation uses this schema to support partial updates.
-        Use this to update the `taskStatus` when task progress changes.
-        To mark a task as completed, use this to update the `taskStatus` to `COMPLETED`.
+        The `PATCH /tasks/{id}` operation uses this schema to support partial updates.
 
     Error:
       type: object
@@ -524,7 +493,7 @@ components:
                 type: string
                 description: The field that caused the error.
                 examples:
-                  - value: "contactEmail"
+                  - value: "email"
               reason:
                 type: string
                 description: Specific reason for the error.
@@ -553,7 +522,7 @@ components:
       type: string
       description: Human-readable error message.
       examples:
-        - value: "The field `contactEmail` must be a valid email address."
+        - value: "The field `email` must be a valid email address."
         - value: "The `lastName` field is required."
         - value: "The requested resource could not be found."
 
@@ -564,7 +533,7 @@ components:
         - value: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
 
     UserId:
-      description: The unique ID of the user's account in the service.
+      description: The unique ID of the user's account in the service to which this task belongs.
       type: integer
 
     LastName:
@@ -589,6 +558,7 @@ components:
 
     TaskId:
       description: The system-defined, unique ID that identifies the task.
+      minimum: 1
       type: integer
 
     TaskTitle:
@@ -602,30 +572,6 @@ components:
       type: string
       minLength: 1
       maxLength: 255
-
-    TaskStatus:
-      description: |
-        The current status of the task in its lifecycle.
-        The status can be one of the following:
-        - NOT_STARTED: The task has not been started yet.
-        - IN_PROGRESS: The task is currently being worked on.
-        - BLOCKED: The task cannot proceed due to an external factor.
-        - DEFERRED: The task has been postponed to a later time.
-        - COMPLETED: The task has been finished.
-        - CANCELLED: The task has been cancelled and will not be completed.
-      type: string
-      enum:
-        - NOT_STARTED
-        - IN_PROGRESS
-        - BLOCKED
-        - DEFERRED
-        - COMPLETED
-        - CANCELLED
-      default: NOT_STARTED
-      examples:
-        - value: "NOT_STARTED"
-        - value: "IN_PROGRESS"
-        - value: "COMPLETED"
 
     DueDate:
       description: The date and time that the task should be performed.
@@ -745,10 +691,10 @@ components:
             invalidParameter:
               summary: Invalid parameter
               description: The request contains values that fail validation,
-                such as an incorrectly formatted `contactEmail` or a non-existent `userId`.
+                such as an incorrectly formatted `email` or a non-existent `userId`.
               value:
                 code: "INVALID_FIELD"
-                message: "The field `contactEmail` must be a valid email address"
+                message: "The field `email` must be a valid email address"
                 details:
                   - field: "email"
                     reason: "Invalid format"
@@ -762,16 +708,6 @@ components:
                 details:
                   - field: "lastName"
                     reason: "Is required"
-                    location: "body"
-                requestId: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
-            invalidStatus:
-              summary: Invalid task status
-              value:
-                code: "INVALID_FIELD"
-                message: "The `taskStatus` value 'DONE' is not valid."
-                details:
-                  - field: "taskStatus"
-                    reason: "Invalid value"
                     location: "body"
                 requestId: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
 
@@ -840,136 +776,128 @@ components:
       summary: List of users
       value:
         users:
-          - userId: 1
+          - id: 1
             lastName: "Smith"
             firstName: "Ferdinand"
-            contactEmail: "f.smith@example.com"
-          - userId: 2
+            email: "f.smith@example.com"
+          - id: 2
             lastName: "Jones"
             firstName: "Jill"
-            contactEmail: "j.jones@example.com"
-          - userId: 3
+            email: "j.jones@example.com"
+          - id: 3
             lastName: "Martinez"
             firstName: "Marty"
-            contactEmail: "m.martinez@example.com"
-          - userId: 4
+            email: "m.martinez@example.com"
+          - id: 4
             lastName: "Bailey"
             firstName: "Bill"
-            contactEmail: "b.bailey@example.com"
+            email: "b.bailey@example.com"
 
     NewUser:
       summary: Example of new user data
       value:
         lastName: "Doe"
         firstName: "John"
-        contactEmail: "j.doe@example.com"
+        email: "j.doe@example.com"
 
     CreatedUser:
       summary: Example of newly created user
       value:
-        userId: 5
+        id: 5
         lastName: "Doe"
         firstName: "John"
-        contactEmail: "j.doe@example.com"
+        email: "j.doe@example.com"
 
     SingleUser:
       summary: Example of a single user
       value:
-        userId: 1
+        id: 1
         lastName: "Smith"
         firstName: "Ferdinand"
-        contactEmail: "f.smith@example.com"
+        email: "f.smith@example.com"
 
     UserPatch:
       summary: Example of user patch data
       value:
-        contactEmail: "new.email@example.com"
+        email: "new.email@example.com"
 
     UpdatedUser:
       summary: Example of updated user
       value:
-        userId: 1
+        id: 1
         lastName: "Smith"
         firstName: "Ferdinand"
-        contactEmail: "new.email@example.com"
+        email: "new.email@example.com"
 
     TasksList:
       summary: List of tasks
       value:
         tasks:
           - userId: 1
-            taskTitle: "Grocery shopping"
-            taskDescription: "eggs, bacon, gummy bears"
-            taskStatus: "NOT_STARTED"
+            title: "Grocery shopping"
+            description: "eggs, bacon, gummy bears"
             dueDate: "2024-02-20T17:00:00.000-05:00"
-            warningOffset: 60
-            taskId: 1
+            warning: 60
+            id: 1
           - userId: 1
-            taskTitle: "Piano recital"
-            taskDescription: "Daughter's first concert appearance"
-            taskStatus: "IN_PROGRESS"
+            title: "Piano recital"
+            description: "Daughter's first concert appearance"
             dueDate: "2024-04-02T15:00:00-05:00"
-            warningOffset: 30
-            taskId: 2
+            warning: 30
+            id: 2
           - userId: 2
-            taskTitle: "Oil change"
-            taskDescription: "5K auto service"
-            taskStatus: "COMPLETED"
+            title: "Oil change"
+            description: "5K auto service"
             dueDate: "2024-03-10T09:00:00-05:00"
-            warningOffset: 60
-            taskId: 3
+            warning: 60
+            id: 3
           - userId: 3
-            taskTitle: "Get shots for dog"
-            taskDescription: "Annual vaccinations for poochy"
-            taskStatus: "DEFERRED"
+            title: "Get shots for dog"
+            description: "Annual vaccinations for poochy"
             dueDate: "2024-05-11T14:00:00-05:00"
-            warningOffset: 20
-            taskId: 4
+            warning: 20
+            id: 4
 
     NewTask:
       summary: Example of new task data
       value:
         userId: 1
-        taskTitle: "New Task"
-        taskDescription: "Description of the new task"
-        taskStatus: "NOT_STARTED"
+        title: "New Task"
+        description: "Description of the new task"
         dueDate: "2024-06-01T12:00:00-05:00"
-        warningOffset: 5
+        warning: 5
 
     CreatedTask:
       summary: Example of newly created task
       value:
-        taskId: 5
+        id: 5
         userId: 1
-        taskTitle: "New Task"
-        taskDescription: "Description of the new task"
-        taskStatus: "NOT_STARTED"
+        title: "New Task"
+        description: "Description of the new task"
         dueDate: "2024-06-01T12:00:00-05:00"
-        warningOffset: 5
+        warning: 5
 
     SingleTask:
       summary: Example of a single task
       value:
         userId: 1
-        taskTitle: "Grocery shopping"
-        taskDescription: "eggs, bacon, gummy bears"
-        taskStatus: "NOT_STARTED"
+        title: "Grocery shopping"
+        description: "eggs, bacon, gummy bears"
         dueDate: "2024-02-20T17:00:00-05:00"
-        warningOffset: 10
-        taskId: 1
+        warning: 10
+        id: 1
 
     TaskPatch:
       summary: Example of task patch data for updating status
       value:
-        taskStatus: "COMPLETED"
+        dueDate: "2024-02-20T17:00:00-05:00"
 
     UpdatedTask:
       summary: Example of updated task
       value:
         userId: 1
-        taskTitle: "Grocery shopping"
-        taskDescription: "Updated description"
-        taskStatus: "COMPLETED"
+        title: "Grocery shopping"
+        description: "Updated description"
         dueDate: "2024-02-20T17:00:00-05:00"
-        warningOffset: 10
-        taskId: 1
+        warning: 10
+        id: 1

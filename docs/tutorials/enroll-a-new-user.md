@@ -62,8 +62,8 @@ To enroll a new user:
 
         ```js
         {
-            "last_name": "Jones",
-            "first_name": "Jenny",
+            "lastName": "Jones",
+            "firstName": "Jenny",
             "email": "jen.jones@example.com"
         }
         ```
@@ -73,8 +73,8 @@ To enroll a new user:
 
     ```js
     {
-        "last_name": "Jones",
-        "first_name": "Jenny",
+        "lastName": "Jones",
+        "firstName": "Jenny",
         "email": "jen.jones@example.com",
         "id": 5
     }

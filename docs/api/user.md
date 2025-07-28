@@ -49,8 +49,8 @@ Sample `user` resource
 ```js
 
 {
-    "last_name": "Smith",
-    "first_name": "Ferdinand",
+    "lastName": "Smith",
+    "firstName": "Ferdinand",
     "email": "f.smith@example.com",
     "id": 1
 }
@@ -58,8 +58,8 @@ Sample `user` resource
 
 | Property name | Type | Description |
 | ------------- | ----------- | ----------- |
-| `last_name` | string | The user's last name |
-| `first_name` | string | The user's first name |
+| `lastName` | string | The user's last name |
+| `firstName` | string | The user's first name |
 | `email` | string | The user's email address |
 | `id` | number | The user's unique record ID |
 

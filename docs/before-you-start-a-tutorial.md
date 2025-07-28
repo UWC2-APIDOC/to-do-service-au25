@@ -93,14 +93,14 @@ To test your development system:.
     ```js
     [
         {
-            "last_name": "Smith",
-            "first_name": "Ferdinand",
+            "lastName": "Smith",
+            "firstName": "Ferdinand",
             "email": "f.smith@example.com",
             "id": 1
         },
         {
-            "last_name": "Jones",
-            "first_name": "Jill",
+            "lastName": "Jones",
+            "firstName": "Jill",
             "email": "j.jones@example.com",
             "id": 2
         },

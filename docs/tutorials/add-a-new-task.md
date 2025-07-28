@@ -61,11 +61,11 @@ To add a new task:
 
         ```js
         {
-            "user_id": 3,
+            "userId": 3,
             "title": "Get new tires",
             "description": "Get new tires for Hoppity",
             "due_date": "2025-03-11T14:00",
-            "warning": "-60"
+            "warning": "60"
         }
         ```
 
@@ -74,11 +74,11 @@ To add a new task:
 
     ```js
     {
-        "user_id": 3,
+        "userId": 3,
         "title": "Get new tires",
         "description": "Get new tires for Hoppity",
         "due_date": "2025-03-11T14:00",
-        "warning": "-60",
+        "warning": "60",
         "id": 5
     }
     ```

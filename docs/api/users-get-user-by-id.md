@@ -54,8 +54,8 @@ None
 ```js
 [
     {
-        "last_name": "Smith",
-        "first_name": "Ferdinand",
+        "lastName": "Smith",
+        "firstName": "Ferdinand",
         "email": "f.smith@example.com",
         "id": 1
     }

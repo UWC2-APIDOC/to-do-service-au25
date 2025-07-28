@@ -52,14 +52,14 @@ None
 ```js
 [
     {
-        "last_name": "Smith",
-        "first_name": "Ferdinand",
+        "lastName": "Smith",
+        "firstName": "Ferdinand",
         "email": "f.smith@example.com",
         "id": 1
     },
     {
-        "last_name": "Jones",
-        "first_name": "Jillio",
+        "lastName": "Jones",
+        "firstName": "Jillio",
         "email": "jlo.jones@example.com",
         "id": 2
     }

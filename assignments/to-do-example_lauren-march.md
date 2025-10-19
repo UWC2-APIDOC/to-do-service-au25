@@ -4,7 +4,7 @@
 
 ## cURL example
 
-The below example is a Get request to get a user by by last name. 
+The below example is a Get request to get a user by by last name.
 
 ### cURL command
 
@@ -25,7 +25,7 @@ C:\Users\psycl>curl http://localhost:3000/users?lastName=Martinez
 
 ## Postman example
 
-Using the POST method, this will add a new user 'Jenny Jones' to the database. 
+Using the POST method, this will add a new user 'Jenny Jones' to the database.
 
 ### Request
 
@@ -35,7 +35,7 @@ Using the POST method, this will add a new user 'Jenny Jones' to the database.
 {{base_url}}/users
 ```
 
-base_url= http://localhost:3000
+base_url= <http://localhost:3000>
 
 ### Postman response
 
@@ -47,5 +47,3 @@ base_url= http://localhost:3000
     "id": 5
 }
 ```
-
-

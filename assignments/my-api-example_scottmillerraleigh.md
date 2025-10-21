@@ -26,7 +26,7 @@ curl http://localhost:3000/game/1
 
 ## Postman example
 
-The Postman example queries the m y-database.json file to retrieve the "publisher" resource with the ID "2"
+The Postman example queries the my-database.json file to retrieve the "publisher" resource with the ID "2"
 
 ### Request
 

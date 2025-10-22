@@ -6,7 +6,7 @@
 
 ### **Method**: Get
 
-The GET command retrieves the book with an ID of 1.
+The Get command retrieves the book with an ID of 1.
 
 ### Get cURL command
 
@@ -28,7 +28,7 @@ curl http://localhost:3000/books/1
 
 ### **Method**: Put
 
-The PUT command updates the price of the book with an ID of 1.
+The Put command updates the price of the book with an ID of 1.
 
 ### Put cURL command
 

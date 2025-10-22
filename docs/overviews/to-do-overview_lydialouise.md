@@ -30,7 +30,7 @@ last_updated: "2025-10-22"
 
 Make forgetting things impossible with the To-Do Service API. Create tasks, set reminders and build smarter workflows to help you stay organized and productive.
 
-[Learn why customers choose the To-Do Service](videos/about-the-to-do-service.mp4){: .btn .btn-outline }
+[Watch the video](videos/about-the-to-do-service.mp4){: .btn .btn-purple }
 
 ## Get started
 
@@ -38,9 +38,9 @@ New to the To-Do Service? Get set up and learn how to turn everyday tasks into o
 
 ### Prepare your environment
 
-Cross setup off the list. Get up and running in just 20 minutes.
+Cross setup off your list. Get up and running in just 20 minutes.
 
-[Set up environment](/docs/before-you-start-a-tutorial.md){: .btn .btn-outline }
+[Set up your environment](/docs/before-you-start-a-tutorial.md){: .btn .btn-outline }
 
 ### Tutorials
 

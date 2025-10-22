@@ -30,7 +30,7 @@ last_updated: "2025-10-22"
 
 Make forgetting things impossible with the To-Do Service API. Create tasks, set reminders and build smarter workflows to help you stay organized and productive.
 
-[Learn why customers choose the To-Do Service →](videos/about-the-to-do-service.mp4){: .btn .btn-purple }
+[Learn why customers choose the To-Do Service](videos/about-the-to-do-service.mp4){: .btn .btn-purple }
 
 ## Get started
 
@@ -38,9 +38,9 @@ New to the To-Do Service? Get set up and learn how to turn everyday tasks into o
 
 ### Prepare your environment
 
-Cross setup off your list. Get up and running in just 20 minutes.
+Cross setup off the list. Get up and running in just 20 minutes.
 
-[Set up my environment →](/docs/before-you-start-a-tutorial.md){: .btn .btn-purple }
+[Set up environment](/docs/before-you-start-a-tutorial.md){: .btn .btn-purple }
 
 ### Tutorials
 
@@ -50,13 +50,13 @@ Turn everyday tasks into organized action with hands-on examples.
 
 Track and manage your tasks from a single platform.
 
-[Post a task →](/docs/tutorials/add-a-new-task.md){: .btn .btn-purple }
+[Post a task](/docs/tutorials/add-a-new-task.md){: .btn .btn-purple }
 
 #### Set it and forget it
 
 Stay on track with automatic notifications.
 
-[Set a reminder →](/docs/tutorials/add-a-new-reminder.md){: .btn .btn-purple }
+[Set a reminder](/docs/tutorials/add-a-new-reminder.md){: .btn .btn-purple }
 
 ## Learn more
 
@@ -71,7 +71,7 @@ From [building a personal productivity app →](http://www.todoservice.com/case-
 
 ## Have a question?
 
-Whether you want a demo, need help with pricing or are curious about our integrations, we're here to help.
+Get help with demos, pricing, integrations, and more.
 
 [FAQ](http://todoservice.com/documentation/faq){: .btn .btn-purple .mr-2 }
 [Contact Sales](http://todoservice.com/sales/contact-us){: .btn .btn-outline }

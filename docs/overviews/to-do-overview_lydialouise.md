@@ -62,12 +62,16 @@ Stay on track with automatic notifications.
 
 Already an existing user? Dive into detailed endpoints with the [API reference →](/docs/api/).
 
+---
+
 For inspiration on staying organized, check out
 the To-Do Service API [YouTube channel →](http://www.youtube.com/@to-do-service) and [blog →](http://www.todoservice.com/blog).
 
+---
+
 From [building a personal productivity app →](http://www.todoservice.com/case-studies/case-4) to [integrating task management into enterprise systems →](http://www.todoservice.com/case-studies/case-61), find out how  customers are using the To-Do Service to stay on top of work that matters.
 
-[Explore case studies →](http://www.todoservice.com/case-studies)
+[Explore case studies](http://www.todoservice.com/case-studies){: .btn .btn-outline }
 
 ## Have a question?
 

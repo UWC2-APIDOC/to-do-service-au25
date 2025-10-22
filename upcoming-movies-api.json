@@ -1,0 +1,32 @@
+{
+  "movies": [
+    {
+      "title": "Tron: Ares",
+      "releaseDate": "2025-10-10",
+      "genreId": 1,
+      "rating": "PG-13",
+      "runtimeMinutes": "1h 59m",
+      "id": 1
+    },
+    {
+      "title": "Black Phone 2",
+      "releaseDate": "2025-10-17",
+      "genreId": 2,
+      "rating": "R",
+      "runtimeMinutes": "1h 54m",
+      "id": 2
+    }
+  ],
+  "genres": [
+    {
+      "name": "Action",
+      "description": "Fast-paced, special effects",
+      "id": 1
+    },
+    {
+      "name": "Horror",
+      "description": "Atmospheric, deadrful, suspenseful, shocking, disgusting",
+      "id": 2
+    }
+  ]
+}

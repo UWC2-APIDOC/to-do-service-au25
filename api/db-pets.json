@@ -1,0 +1,20 @@
+{
+  "cats": [
+    {
+      "Breed": "Himalyan",
+      "Hunts": "indoor",
+      "Hair": "long",
+      "Color": "cream",
+      "id": 1
+    }
+  ],
+  "dogs": [
+    {
+      "Breed": "Pomeranian",
+      "Color": "golden-brown",
+      "Hair": "short",
+      "Roams": "indoor",
+      "id": 1
+    }
+  ]
+}

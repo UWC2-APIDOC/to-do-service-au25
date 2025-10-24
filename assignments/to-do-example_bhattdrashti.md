@@ -4,8 +4,8 @@
 
 ## cURL example
 
-\<This example demonstrates how to **create a new to-do item** in the To-Do service using cURL.
-\>
+This example demonstrates how to **create a new to-do item** in the To-Do Service using cURL.
+
 
 ### cURL command
 
@@ -23,12 +23,12 @@ curl -X POST http://localhost:3000/tasks \
   "id": "a2c3",
   "title": "Read a book",
   "completed": false
-}%   
+}
 ```
 
 ## Postman example
 
-This example demonstrates how to create a new to-do item in the To-Do service using Postman.
+This example demonstrates how to create a new to-do item in the To-Do Service using Postman.
 
 ### Request
 
@@ -48,5 +48,5 @@ curl -X POST http://localhost:3000/tasks \
   "id": "048c",
   "title": "Read a book",
   "completed": false
-}%  
+}
 ```

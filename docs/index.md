@@ -34,7 +34,7 @@ subscribers can post tasks and receive reminders of those tasks.
 
 ## Quickstart
 
-[Post your first task _(coming soon)_](#quickstart) with the To-Do Service to see how easy it is to use!
+[New overview topic](../docs/overview/to-do-overview_bhattdrashti.md) 
 
 ## Tutorials
 

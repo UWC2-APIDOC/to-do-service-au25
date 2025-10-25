@@ -52,6 +52,7 @@ After your system is ready, these tutorials show you how to perform common tasks
 * [Add a new task](tutorials/add-a-new-task.md)
 * [Find a user by first name](tutorials/find-user-by-first-name.md)
 * [Update a task by ID](api/patch-task-by-id.md)
+* [Patch an update for an existing task](tutorials/patch-task-tutorial.md)
 * [Change the due-date of a task _(coming soon)_](#tutorials)
 * [Delete a task _(coming soon)_](#tutorials)
 

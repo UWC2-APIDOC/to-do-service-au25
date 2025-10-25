@@ -14,7 +14,7 @@ curl http://localhost:3000/users/1
 
 ### cURL response
 
-```shell
+```json
 {
   "lastName": "Smith",
   "firstName": "Ferdinand",
@@ -37,7 +37,7 @@ http://localhost:3000/users/2
 
 ### Postman response
 
-```shell
+```json
 {
     "lastName": "Jones",
     "firstName": "Jill",

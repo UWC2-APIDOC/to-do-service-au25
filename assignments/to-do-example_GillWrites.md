@@ -9,7 +9,7 @@ Get request for User 3
 ### cURL command
 
 ```shell
-curl http://localhost:3000/Usrs/2
+curl http://localhost:3000/Users/2
 
 ```
 

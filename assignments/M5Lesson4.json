@@ -1,0 +1,20 @@
+{
+  "cats": [
+    {
+      "Breed": "Persian",
+      "Hunts": "indoors",
+      "Hair": "long",
+      "Color": "white",
+      "id": 1
+    }
+  ],
+  "dogs": [
+    {
+      "Breed": "Labrador",
+      "Color": "black",
+      "Hair": "short",
+      "Roams": "outside",
+      "id": 1
+    }
+  ]
+}

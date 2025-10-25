@@ -14,15 +14,15 @@ curl http://localhost:3000/tasks/4
 
 ### cURL response
 
-```shell
+```json
 {
-                      "userId": 3,
-                      "title": "Get shots for dog",
-                      "description": "Annual vaccinations for poochy",
-                      "dueDate": "2025-12-11T14:00",
-                      "warning": "20",
-                      "id": 4
-                    }
+  "userId": 3,
+  "title": "Get shots for dog",
+  "description": "Annual vaccinations for poochy",
+  "dueDate": "2025-12-11T14:00",
+  "warning": "20",
+  "id": 4
+}
 ```
 
 ## Postman example
@@ -39,25 +39,25 @@ http://localhost:3000/tasks
 
 #### Data accompanying the request
 
-```shell
+```json
 {
-        "userId": 2,
-        "title": "Propose!!!",
-        "description": "Ask her to marry you",
-        "dueDate": "2025-12-10T09:00",
-        "warning": "60"
+  "userId": 2,
+  "title": "Propose!!!",
+  "description": "Ask her to marry you",
+  "dueDate": "2025-12-10T09:00",
+  "warning": "60"
 }
 ```
 
 ### Postman response
 
-```shell
+```json
 {
-    "userId": 2,
-    "title": "Propose!!!",
-    "description": "Ask her to marry you",
-    "dueDate": "2025-12-10T09:00",
-    "warning": "60",
-    "id": 5
+  "userId": 2,
+  "title": "Propose!!!",
+  "description": "Ask her to marry you",
+  "dueDate": "2025-12-10T09:00",
+  "warning": "60",
+  "id": 5
 }
 ```

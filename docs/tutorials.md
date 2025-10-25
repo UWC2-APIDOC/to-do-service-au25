@@ -16,6 +16,7 @@ importance: 8
 prerequisites: []
 related_pages: 
     - /tutorials/add-a-new-task
+    - /tutorials/update-a-task
     - /tutorials/enroll-a-new-user
 examples: []
 api_endpoints: []
@@ -27,10 +28,11 @@ last_updated: "2025-09-03"
 
 # Tutorials
 
-These tutorials are available to help you start using the **To-Do service API**.
+These tutorials are available to help you start using the **To-Do Service API**.
 
 Be sure to review [Before you start a tutorial](before-you-start-a-tutorial.md)
 before you start your first tutorial.
 
 * [Enroll a new user](tutorials/enroll-a-new-user.md)
 * [Add a new task](tutorials/add-a-new-task.md)
+* [Update an existing task](tutorials/update-a-task.md)

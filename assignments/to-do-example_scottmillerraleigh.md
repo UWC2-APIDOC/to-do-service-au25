@@ -4,7 +4,7 @@
 
 ## cURL example
 
-to get a specific user
+Get a specific user.
 
 ### cURL command
 
@@ -14,7 +14,7 @@ curl http://localhost:3000/users/1/
 
 ### cURL response
 
-```shell
+```json
 {
   "lastName": "Smith",
   "firstName": "Ferdinand",
@@ -26,7 +26,7 @@ curl http://localhost:3000/users/1/
 
 ## Postman example
 
-to get a specific task
+Get a specific task.
 
 ### Request
 
@@ -38,7 +38,7 @@ GET http://localhost:3000/tasks/4
 
 ### Postman response
 
-```shell
+```json
 {
     "userId": 3,
     "title": "Get shots for dog",

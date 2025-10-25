@@ -1,4 +1,4 @@
-# Code examples
+# My API Code Example
 
 **Author:** Lauren March
 
@@ -9,7 +9,7 @@ A GET request to get a list of breads from the database.
 ### cURL command
 
 ```shell
-C:\Users\psycl>curl http://localhost:3000/breads
+curl http://localhost:3000/breads
 ```
 
 ### cURL response
@@ -33,11 +33,11 @@ C:\Users\psycl>curl http://localhost:3000/breads
 
 ## Postman example
 
-\<replace with a description of the example\>
+A GET request to get a single pastry with ID = 1.
 
 ### Request
 
-**Method**: GET
+**Method**: `GET`
 
 ```shell
 http://localhost:3000/pastries/1

@@ -34,7 +34,7 @@ subscribers can post tasks and receive reminders of those tasks.
 
 ## Quickstart
 
-[Post your first task _(coming soon)_](#quickstart) with the To-Do Service to see how easy it is to use!
+[Post your first task](#quickstart) with the To-Do Service to view its simplicity.
 
 ## Tutorials
 
@@ -49,8 +49,9 @@ After your system is ready, these tutorials show you how to perform common tasks
 
 * [Enroll a new user](tutorials/enroll-a-new-user.md)
 * [Add a new task](tutorials/add-a-new-task.md)
-* [Change the due-date of a task _(coming soon)_](#tutorials)
-* [Delete a task _(coming soon)_](#tutorials)
+* [Find a user by first name](tutorials/find-user-by-first-name.md)
+* [Change the due-date of a task](#tutorials)
+* [Delete a task](#tutorials)
 
 ## API reference docs
 

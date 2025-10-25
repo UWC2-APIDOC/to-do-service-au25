@@ -4,7 +4,7 @@
 
 ## cURL example
 
-Get request for User 3
+Get request for User 2
 
 ### cURL command
 

@@ -68,4 +68,8 @@ Sample `task` resource
 
 * [Get all tasks _(coming soon)_](#resource-properties)
 * [Get task by ID _(coming soon)_](#resource-properties)
+* [Get tasks by user ID](./tasks-get-tasks-by-user-id.md)
+
+## Tutorials
+
 * [Get task by user ID](../tutorials/get-tasks-assigned-to-a-userid.md)

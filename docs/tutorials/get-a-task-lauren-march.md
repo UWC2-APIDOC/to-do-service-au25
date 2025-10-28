@@ -44,7 +44,7 @@ Once you have your environment setup, and you want to query all tasks, you'll ne
 1. Make sure your local service is running by entering the following command:
 
     ```shell
-    cd <your-github-workspace>\to-do-service-au25\api
+    cd <your-github-workspace>\to-do-service\api
     npx json-server --watch to-do-db-source.json
     ```
 

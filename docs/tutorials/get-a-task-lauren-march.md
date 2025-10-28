@@ -105,7 +105,7 @@ Once you have your environment setup, and you want to query all tasks, you'll ne
     }
     ```
 
-1. (Optional) Modify the request to `http://localhost:3000/tasks/3`and repeat steps 4 and 5 above. This will allow you to query a task based on its Task ID.
+1. (Optional) Repeat the above steps, but modify the request to `http://localhost:3000/tasks/3`. This will allow you to query a task based on its Task ID.
 
 1. Verify the following task is listed in the bottom viewport:
 

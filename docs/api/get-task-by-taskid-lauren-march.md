@@ -3,7 +3,7 @@
 # vale  off
 layout: default
 parent: task resource
-nav_order: 2
+nav_order: 6
 # tags used by AI files
 description: GET the `task` resource with the specified ID from the service
 tags:

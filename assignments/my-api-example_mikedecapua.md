@@ -1,31 +1,97 @@
-# Markdown for Technical Writers
+# Code examples
 
-## About
-**Markdown** is a *lightweight markup language* that you can use to add formatting elements to plaintext text documents. 
+**Author:** \<Mike DeCapua>
 
-| Advantages | Limitations |
-|------------| ------------|
-| It's easy to learn. | Different flavors on Markdown can cause inconsistencies. |
-| It's simple to use. | Complex layouts can cause confusion. |
+## cURL example
 
-## Features
-- Headers
+GET users
 
-  ` # Heading 1 `
- 
-  ` ## Heading 2 `
+### cURL command
 
-- Links
+```json
+curl http://localhost:3000/users
 
-  ` [title](https://www.example.com) `
+```
 
-- Code blocks
-  
-  ` Sample code block `
+### cURL response
 
-## Advice
+```json
+[
+  {
+    "lastName": "Smith",
+    "firstName": "Ferdinand",
+    "email": "f.smith@example.com",
+    "id": 1
+  },
+  {
+    "lastName": "Jones",
+    "firstName": "Jill",
+    "email": "j.jones@example.com",
+    "id": 2
+  },
+  {
+    "lastName": "Martinez",
+    "firstName": "Marty",
+    "email": "m.martinez@example.com",
+    "id": 3
+  },
+  {
+    "lastName": "Bailey",
+    "firstName": "Bill",
+    "email": "b.bailey@example.com",
+    "id": 4
+  }
+]
 
-1. Establish a clear Style Guide prior to initiating documentation practice.
-2. Use a linter like Vale.
+```
 
-See [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for more information.
+## Postman example
+
+GET tasks
+
+### Request
+
+**Method**:
+
+```shell
+http://localhost:3000/tasks
+```
+
+### Postman response
+
+```json
+[
+    {
+        "userId": 1,
+        "title": "Grocery shopping",
+        "description": "eggs, bacon, gummy bears",
+        "dueDate": "2025-09-20T17:00",
+        "warning": "10",
+        "id": 1
+    },
+    {
+        "userId": 1,
+        "title": "Piano recital",
+        "description": "Daughter's first concert appearance",
+        "dueDate": "2025-10-02T15:00",
+        "warning": "30",
+        "id": 2
+    },
+    {
+        "userId": 2,
+        "title": "Oil change",
+        "description": "5K auto service",
+        "dueDate": "2025-11-10T09:00",
+        "warning": "60",
+        "id": 3
+    },
+    {
+        "userId": 3,
+        "title": "Get shots for dog",
+        "description": "Annual vaccinations for poochy",
+        "dueDate": "2025-12-11T14:00",
+        "warning": "20",
+        "id": 4
+    }
+]
+```

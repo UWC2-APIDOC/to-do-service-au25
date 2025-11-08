@@ -45,9 +45,9 @@
     {
       "userId": 2,
       "title": "Oil change",
-      "description": "5K auto service",
+      "description": "5K auto service at new shop",
       "dueDate": "2025-11-10T09:00",
-      "warning": "60",
+      "warning": 30,
       "id": 3
     },
     {

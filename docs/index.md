@@ -15,6 +15,7 @@ prerequisites: []
 related_pages: 
     - /before-you-start-a-tutorial 
     - /tutorials/add-a-new-task
+    - /tutorials/update-a-task
     - /tutorials/enroll-a-new-user
     - /tutorials/update-a-user-by-id
 examples: []
@@ -50,6 +51,7 @@ After your system is ready, these tutorials show you how to perform common tasks
 
 * [Enroll a new user](tutorials/enroll-a-new-user.md)
 * [Add a new task](tutorials/add-a-new-task.md)
+* [Update an existing task](tutorials/update-a-task.md)
 * [Change the due-date of a task _(coming soon)_](#tutorials)
 * [Delete a task _(coming soon)_](#tutorials)
 

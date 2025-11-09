@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This document will help you to understand how to use the GET method to
+This document helps you to understand how to use the GET method to
 interact with tasks on the To-Do Service API.
 
 By reading this Quick Start guide, you should be able to understand
@@ -11,36 +11,30 @@ and use the GET method.
 You will use the GET method to retrieve a list of all tasks
 and a specific task using the API.
 
-The HTTP method "GET" is used in REST APIs to request data
-from a specified resource.
+Use the HTTP method "GET" to request data in REST APIs
+from a specific resource.
 
 For more details on the GET method, [see this page.](https://www.w3schools.com/tags/ref_httpmethods.asp)
 
 Allow 15 minutes for successfully reading and understanding this document.
 
-Before you start the document, you need a terminal application,
-such as GitBash or PostMan.
-
-You also need a current or LTS version of node.js and
-version 0.17.4 of json-server.
-
-For more details, [see this guide.](../before-you-start-a-tutorial.md)
+Before you start the document, please [read the setup guide here.](../before-you-start-a-tutorial.md)
 
 ## Retrieve a list of all tasks
 
 ### Use cURL (all tasks)
 
-Using the terminal, you should enter the following text:
+Using the terminal, enter the following text:
 
 ```shell
 http://localhost:3000/tasks/
 ```
 
-This request uses the GET method to query the tasks resource for a list of all the tasks.
+Use the GET method to query the tasks resource for a list of all the tasks.
 
-You will see a list of all the tasks as a response in your terminal.
+You will receive a list of all the tasks as a response in your terminal.
 
-The result should look something like this:
+The result will look something like this:
 
 ```json
 [
@@ -79,7 +73,7 @@ The result should look something like this:
 ]
 ```
 
-If you do not see a response at all, ensure that your local JSON server is running.
+If you do not receive a response at all, ensure that your local JSON server is running.
 
 ### Use PostMan (all tasks)
 
@@ -92,10 +86,10 @@ If you do not see a response at all, ensure that your local JSON server is runni
 http://localhost:3000/tasks
 ```
 
-This request uses the GET method to query the tasks resource for
+Use the GET method to query the tasks resource for
 a list of all the tasks.
 
-You will see a list of all the tasks as a response in the "Body" tab
+You will receive a list of all the tasks as a response in the "Body" tab
 at the bottom of PostMan.
 
 The result should look something like this:
@@ -137,22 +131,22 @@ The result should look something like this:
 ]
 ```
 
-If you do not see a response at all, ensure that your local JSON server is running.
+If you do not receive a response at all, ensure that your local JSON server is running.
 
 ## Retrieve 1 specific task
 
 ### Use cURL (1 task)
 
-Using the terminal, you should enter the following text:
+Using the terminal, enter the following text:
 
 ```shell
 http://localhost:3000/tasks/1
 ```
 
-This request uses the GET method to query the task for a specific
+Use the GET method to query the task for a specific
 resource for one matching result.
 
-You will see the result response in your terminal.
+You will receive a result response in your terminal.
 
 The result should look something like this:
 
@@ -169,10 +163,10 @@ The result should look something like this:
 
 Change the number in your query to get a different task.
 
-If you do not see a response at all, there might not be a
+If you do not receive a response at all, there might not be a
 task with the number that you enter.
 
-If you are unable to retrieve any tasks, ensure that your
+If you cannot retrieve any tasks, ensure that your
 local JSON server is running.
 
 ### Use PostMan (1 task)
@@ -186,9 +180,9 @@ local JSON server is running.
 http://localhost:3000/tasks/1
 ```
 
-This request uses the GET method to query the tasks resource for one specific task.
+Use the GET method to query the tasks resource for one specific task.
 
-You will see the retrieved result in the "Body" tab at the bottom of PostMan.
+You will receive the retrieved result in the "Body" tab at the bottom of PostMan.
 
 The result should look something like this:
 
@@ -205,10 +199,10 @@ The result should look something like this:
 
 Change the number in your query to get a different task.
 
-If you do not see a response at all, there might not be a task with the number
+If you do not receive a response at all, there might not be a task with the number
 that you enter.
 
-If you are unable to retrieve any tasks, ensure that your local JSON server is running.
+If you cannot retrieve any tasks, ensure that your local JSON server is running.
 
 ## Conclusion
 
@@ -222,5 +216,5 @@ You have also learned how to GET a specific task using both cURL and PostMan.
 If you want more information about the To-Do Service API, visit these related topics.
 
 * [To-Do Service API Overview](../index.md)
-* [Add a new task](/add-a-new-task.md)
-* [Enroll a new user](/enroll-a-new-user.md)
+* [Add a new task](/.add-a-new-task.md)
+* [Enroll a new user](./enroll-a-new-user.md)

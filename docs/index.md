@@ -16,11 +16,10 @@ related_pages:
     - /before-you-start-a-tutorial 
     - /tutorials/add-a-new-task
     - /tutorials/enroll-a-new-user
-    - /tutorials/update-a-user-by-id
 examples: []
 api_endpoints: []
 version: "v1.0"
-last_updated: "2025-10-25"
+last_updated: "2025-09-03"
 # vale  on
 # markdownlint-enable
 ---

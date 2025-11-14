@@ -1,0 +1,83 @@
+# POST /users
+
+Creates a new user account.
+
+## Endpoint
+
+```text
+POST /api/v1/users
+```
+
+**Authentication:** Required (token)  
+**Permissions:** `users:create` or `admin`
+
+## Request Body
+
+```json
+{
+  "email": "jane.smith@example.com",
+  "username": "janesmith",
+  "password": "SecurePass123!",
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "role": "user",                    // Optional: user, admin, moderator (default: user)
+  "phoneNumber": "+15551234567",     // Optional
+  "department": "Engineering"        // Optional
+}
+```
+
+### Required Fields
+
+- `email` - Valid email address (must be unique)
+- `username` - 3-30 characters, alphanumeric and underscores
+- `password` - Min 8 characters with uppercase, lowercase, number, and special character
+- `firstName` - 1-50 characters
+- `lastName` - 1-50 characters
+
+## Response
+
+### Success (201 Created)
+
+```json
+{
+  "id": "usr_7k2m9p4q8r",
+  "email": "jane.smith@example.com",
+  "username": "janesmith",
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "role": "user",
+  "status": "active",
+  "emailVerified": false,
+  "createdAt": "2025-10-27T14:30:00Z"
+}
+```
+
+### Common Errors
+
+| Code | Reason |
+|------|--------|
+| 400 | Invalid request (validation failed) |
+| 401 | Missing or invalid authentication |
+| 403 | Insufficient permissions |
+| 409 | Email or username already exists |
+
+## Example
+
+```bash
+curl -X POST https://api.example.com/api/v1/users \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "jane.smith@example.com",
+    "username": "janesmith",
+    "password": "SecurePass123!",
+    "firstName": "Jane",
+    "lastName": "Smith"
+  }'
+```
+
+## Notes
+
+- Verification email sent automatically upon creation
+- Password is hashed and never returned in responses
+- Rate limit: 100 requests/hour

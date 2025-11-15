@@ -1,0 +1,102 @@
+---
+# markdownlint-disable
+# vale  off
+layout: default
+parent: user resource
+nav_order: 3
+# tags used by AI files
+description: PATCH the `user` resource to update specific fields for the user with the specified ID
+tags:
+    - api
+categories:
+    - api-reference
+ai_relevance: high
+importance: 7
+prerequisites: 
+    - /api/user
+related_pages: 
+    - get-user-by-id
+examples: []
+api_endpoints: 
+    - PATCH /users
+version: "v1.0"
+last_updated: "2025-10-25"
+# vale  on
+# markdownlint-enable
+---
+
+# Update a user by ID
+
+Updates specific fields of the [`user`](user.md) object specified by the `id` parameter. Only the fields provided in the request body will be modified.
+
+## URL
+
+```shell
+{server_url}/users/{id}
+```
+
+## Parameters
+
+| Parameter name | Type | Description |
+| -------------- | ------ | ------------ |
+| `id` | number | The record ID of the user to update |
+
+## Request headers
+
+| Header name | Type | Required | Description |
+| ----------- | ---- | -------- | ----------- |
+| Content-Type | string | Yes | Must be `application/json` |
+
+## Request body
+
+Provide only the fields you want to update. All fields are optional.
+
+```js
+
+{
+    "lastName": "string",
+    "firstName": "string",
+    "email": "string"
+}
+```
+
+### Request body parameters
+
+| Property name | Type | Description |
+| ------------- | ---- | ----------- |
+| `lastName` | string | The user's last name |
+| `firstName` | string | The user's first name |
+| `email` | string | The user's email address (must be valid email format) |
+
+## Return body
+
+```js
+{
+    "lastName": "Johnson",
+    "firstName": "Ferdinand",
+    "email": "f.johnson@example.com",
+    "id": 1
+}
+```
+
+Returns the complete updated user object with all fields.
+
+## Return status
+
+| Status value | Return status | Description |
+| ------------- | ----------- | ----------- |
+| 200 | Success | User updated successfully |
+| 400 | Error | Invalid request body or email format |
+| 404 | Error | Specified user record not found |
+| ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
+
+## Example request
+
+```shell
+curl -X PATCH "{server_url}/users/1" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "lastName": "Johnson",
+    "email": "f.johnson@example.com"
+  }'
+```

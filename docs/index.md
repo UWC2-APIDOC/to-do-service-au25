@@ -16,10 +16,11 @@ related_pages:
     - /before-you-start-a-tutorial 
     - /tutorials/add-a-new-task
     - /tutorials/enroll-a-new-user
+    - /tutorials/update-a-user-by-id
 examples: []
 api_endpoints: []
 version: "v1.0"
-last_updated: "2025-09-03"
+last_updated: "2025-10-25"
 # vale  on
 # markdownlint-enable
 ---
@@ -49,6 +50,8 @@ After your system is ready, these tutorials show you how to perform common tasks
 
 * [Enroll a new user](tutorials/enroll-a-new-user.md)
 * [Add a new task](tutorials/add-a-new-task.md)
+* [Find a user by first name](tutorials/find-user-by-first-name.md)
+* [Update a task by ID](api/patch-task-by-id.md)
 * [Change the due-date of a task _(coming soon)_](#tutorials)
 * [Delete a task _(coming soon)_](#tutorials)
 

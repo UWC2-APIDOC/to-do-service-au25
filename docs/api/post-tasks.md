@@ -2,10 +2,10 @@
 # markdownlint-disable
 # vale  off
 layout: default
-parent: user resource
+parent: task resource
 nav_order: 1
 # tags used by AI files
-description: Post a `task` resources to the service
+description: Post `task` resource to the service
 tags:
     - api
 categories:
@@ -24,14 +24,13 @@ last_updated: "2025-09-03"
 # markdownlint-enable
 ---
 
-# Post users
+# Post task
 
-Post new tasks to the service.
+Post new task to the service.
 
 ## URL
 
 ```shell
-
 {server_url}/tasks
 ```
 
@@ -45,36 +44,39 @@ None
 
 ## Request body
 
-```js
-[
-    {
-        "lastName": "Smith",
-        "firstName": "Ferdinand",
-        "email": "f.smith@example.com",
-        "id": 1
-    },
-    {
-        "lastName": "Jones",
-        "firstName": "Jillio",
-        "email": "jlo.jones@example.com",
-        "id": 2
-    }
-    ...
-]
+```json
+{
+    "userId": 1,
+    "title": "New task 1",
+    "description": "an urgent task",
+    "dueDate": "2026-02-21T17:00",
+    "warning": "10"
+}
 ```
 
 ## Return body
 
-None
+Returns the new task
+
+```json
+{
+    "userId": 1,
+    "title": "New task 1",
+    "description": "an urgent task",
+    "dueDate": "2026-02-21T17:00",
+    "warning": "10",
+    "id": 5
+}
+```
 
 ## Return status
 
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
-| 200 | Success | Requested data posted successfully |
+| 201 | Success | New task resource added successfully |
 | 404 | Error | Requested data not posted successfully |
 |  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
 
 ## Related topics
 
-[task resource](https://drenn08.github.io/to-do-service-au25/api/task/)
+[task resource](./task.md)
